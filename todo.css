@@ -6,6 +6,8 @@
   box-sizing: border-box;
 }
 body {
+  width: 100vw;
+  height: 100vh;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.4) 50%,
       rgba(0, 0, 0, 0.4) 50%
@@ -16,21 +18,20 @@ body {
   background-attachment: fixed;
 }
 .container {
+  min-width: 400px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   position: relative;
-  margin-top: 60px;
-  padding: 0;
-  background-color: #555;
 }
 .todo {
-  max-width: 400px;
+  min-width: 400px;
   background-color: white;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   padding: 20px;
-
+  margin: 20px;
   overflow: hidden;
   position: absolute;
   top: 10%;
@@ -52,6 +53,7 @@ body {
   font-style: normal;
 }
 .input {
+  max-width: 100%;
   margin-top: 2vmin;
   display: flex;
   align-items: center;
@@ -143,20 +145,13 @@ ul span:hover {
 @media only screen and (max-width: 450px) {
   body {
     background-image: none;
-    padding: 0%;
-    margin: 0;
-    overflow: hidden;
-  }
-  .container {
-    margin-top: 0;
   }
   .todo {
-    width: 100%;
+    min-width: 400px;
     border-radius: 0px;
     overflow: hidden;
     position: absolute;
-    top: -2%;
-    margin: 0px;
+    top: -3%;
     padding-bottom: 60px;
     padding-left: 5vmin;
   }
