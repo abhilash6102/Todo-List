@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.4) 50%
+    ),
+    url("img1.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.container {
+  min-width: 400px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.todo {
+  min-width: 400px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 10%;
+  padding-bottom: 40px;
+}
+.heading {
+  display: flex;
+  gap: 5px;
+}
+.heading .icon {
+  width: 30px;
+  height: 30px;
+}
+.heading .text {
+  color: rgb(34, 91, 17);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  font-style: normal;
+}
+.input {
+  max-width: 100%;
+  margin-top: 2vmin;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  background-color: rgb(236, 232, 239);
+  padding-left: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.input #input-box {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 80%;
+  font-style: normal;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: transparent;
+  flex: 1;
+}
+.input .btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 90%;
+  font-style: normal;
+  border: none;
+  padding: 10px 35px 10px 35px;
+  background-color: rgb(51, 116, 31);
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.input .btn:hover {
+  background-color: rgb(28, 80, 11);
+}
+ul li {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 90%;
+  font-style: normal;
+  padding: 10px 10px 10px 40px;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-position: center;
+  background-size: cover;
+  top: 14px;
+  left: 10px;
+}
+ul .check {
+  color: rgb(223, 19, 19);
+  text-decoration: black line-through;
+}
+ul .check::before {
+  background-image: url(images/checked.png);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 3px;
+}
+ul span {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 999;
+}
+ul span:hover {
+  background-color: #edeef0;
+}
+@media only screen and (max-width: 450px) {
+  .todo {
+    min-width: 400px;
+    min-height: 106vh;
+    border-radius: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: -3%;
+    padding-bottom: 60px;
+  }
+  .heading {
+    display: flex;
+    gap: 5px;
+    margin-top: 25px;
+  }
+  .input {
+    margin-top: 20px;
+  }
+}
