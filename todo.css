@@ -23,6 +23,8 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 .todo {
   min-width: 400px;
@@ -143,14 +145,18 @@ ul span:hover {
   background-color: #edeef0;
 }
 @media only screen and (max-width: 450px) {
+  body {
+    background-image: none;
+  }
   .todo {
-    min-width: 400px;
-    min-height: 106vh;
+    width: 450px;
     border-radius: 0px;
     overflow: hidden;
     position: absolute;
-    top: -3%;
+    top: -2%;
+    margin: 0px;
     padding-bottom: 60px;
+    padding-left: 11vmin;
   }
   .heading {
     display: flex;
